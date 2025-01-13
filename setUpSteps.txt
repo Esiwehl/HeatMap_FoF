@@ -1,0 +1,20 @@
+Camera opzet:
+	de donkere kant van de de kabel met 'het gezicht' naar het bewegende deel.
+	run in de terminal `libcamera-hello --timeout 0`
+	als die het doet, dan ben je ready to go naar de volgende stap.
+	Zo niet, kijk even of I2C enabled is in `sudo raspi_config`
+	anders kan het ook dat je in de config.txt moet roeren:
+	`nano /boot/firmware/config.txt`. 
+
+	start_x=1			#Deze is belangrijk
+	camera_auto_detect=0		#Deze ook
+	dtoverlay=imx708			#Hier heb ik zelf niets mee hoeven doen
+	dtoverlay=vc4-kms-v3d			#Zelfde voor deze.
+
+Makkelijkste manier om openCV te installeren:
+	`sudo apt-get install libopencv-dev python3-opencv`
+
+https://github.com/raspberrypi/picamera2?tab=readme-ov-file
+https://www.kernel.org/doc/html/v4.9/media/uapi/v4l/v4l2.htmlhttps://github.com/microsoft/IoT-For-Beginners/blob/main/4-manufacturing/lessons/2-check-fruit-from-device/pi-camera.md
+https://www.raspberrypi.com/documentation/accessories/camera.html
+
