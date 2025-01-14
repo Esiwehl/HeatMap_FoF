@@ -1,0 +1,8 @@
+Adafruit_Blinka
+adafruit_circuitpython_mlx90640
+matplotlib
+numpy
+picamera2
+PyQt5
+PyQt5_sip
+scipy
