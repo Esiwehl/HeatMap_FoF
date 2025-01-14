@@ -89,7 +89,7 @@ def main():
     picam2.start()
 
     # Stel de offset en schaal in
-    offset_x, offset_y = 0, -370  # Pas aan om de positie van de overlay te bepalen
+    offset_x, offset_y = 20, -440  # Pas aan om de positie van de overlay te bepalen
     target_resolution = (960, 720)  # Maak het thermische frame geschikt voor het camera frame
 
     try:
@@ -113,7 +113,7 @@ def main():
             # Combineer camerabeeld en thermisch beeld
             combined_frame = combine_frames(
                 camera_frame, thermal_colored,
-                alpha=0.6, offset_x=offset_x, offset_y=offset_y
+                alpha=0.3, offset_x=offset_x, offset_y=offset_y
             )
 
             # Toon het gecombineerde beeld
